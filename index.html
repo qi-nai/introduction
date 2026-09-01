@@ -335,6 +335,48 @@
   }
   details.collapse > ol.love{animation:loveExpand .35s ease;}
 
+  /* ===== 情感经历密码锁 ===== */
+  .love-lock{
+    margin:20px 0 6px;padding:26px 24px;
+    background:linear-gradient(135deg,#fff7d6,#ffe9a8);
+    border:2px dashed var(--poke-red);border-radius:14px;
+    text-align:center;
+  }
+  .love-lock .lockball{
+    width:52px;height:52px;margin:0 auto 12px;
+    background:
+      radial-gradient(circle at 50% 50%, #fff 0 6px, #222 6px 9px, transparent 9.5px),
+      linear-gradient(180deg,var(--poke-red) 0 50%, #fff 50% 100%);
+    border:3px solid #222;border-radius:50%;
+    box-shadow:0 5px 12px rgba(180,40,20,.25);
+    animation:lockWobble 3s ease-in-out infinite;
+  }
+  @keyframes lockWobble{0%,100%{transform:rotate(-8deg);}50%{transform:rotate(8deg);}}
+  .love-lock p.tip{font-size:15px;color:var(--accent-deep);font-weight:600;margin:0 0 14px;line-height:1.9;}
+  .love-lock .lock-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+  .love-lock input{
+    width:190px;padding:10px 16px;font-size:16px;
+    border:2px solid #222;border-radius:999px;outline:none;
+    background:#fff;text-align:center;letter-spacing:.35em;
+    font-family:inherit;
+  }
+  .love-lock input:focus{border-color:var(--poke-red);box-shadow:0 0 0 3px rgba(227,53,13,.15);}
+  .love-lock button{
+    padding:10px 24px;font-size:15px;font-weight:700;color:#fff;
+    background:linear-gradient(135deg,var(--poke-red),var(--poke-red-deep));
+    border:2px solid #222;border-radius:999px;cursor:pointer;
+    box-shadow:0 4px 0 rgba(34,34,34,.22);
+    font-family:inherit;transition:transform .15s ease;
+  }
+  .love-lock button:hover{transform:translateY(-1px);}
+  .love-lock .lock-err{display:none;margin:12px 0 0;color:var(--poke-red-deep);font-size:14px;font-weight:600;}
+  .love-lock.shake{animation:lockShake .4s ease;}
+  @keyframes lockShake{
+    0%,100%{transform:translateX(0);}
+    20%,60%{transform:translateX(-8px);}
+    40%,80%{transform:translateX(8px);}
+  }
+  #loveBody > ol.love{animation:loveExpand .35s ease;}
   footer{
     text-align:center;color:var(--muted);font-size:13px;
     padding:30px 20px 50px;letter-spacing:.05em;
@@ -490,18 +532,16 @@
     <h2><span class="pokeball"></span>情感经历</h2>
     <p class="love-head"><span class="big">谈情说爱亦是修行</span>修识人之智，克经营之艰，成红尘正果。</p>
     <p class="love-note"><b>首先：</b>情感经历≠恋爱经历</p>
-    <details class="collapse">
-      <summary>展开感情经历</summary>
-      <ol class="love">
-      <li><span class="who">第一个她</span>小学五年级2006年，她是我的同桌，我们天天在一起，上课也偷偷聊天。那时应该属于懵懵懂懂的喜欢，她在书上写下我的名字，我用小刀在桌子上刻下她的名字还被老师抓到了羞愧死。有一次上英语多媒体课，因为戴耳机原因所以玩得有点嗨，没注意到老师，英语老师生气了，班主任知道以后在班里点名公开，然后将我们的位置分开了，就都不好意思继续了，这份喜欢总共持续了一个多学期吧。</li>
-      <li><span class="who">第二个她</span>初三时候认识的，她是我朋友的朋友，通过聚会认识，然后相处中我们无话不谈，她很优秀，跟她聊天她告诉我在学校里很多人追求她全部统统都拒绝，并为此感到困扰，我就记住了。后来有一次情人节她有跟我说，别人追求她她会反感，如果是我追求她的话，她并不会反感，如果当时的我能够理解并体会到她的心意的话应该会表白的，我只记得她告诉过我"她上大学之前不打算谈恋爱"，所以我记得并遵守，不想给她造成困扰。后来我们关系慢慢的淡了，大概在她大学以后她告诉我，如果我当时向她表白她会同意的；这是一份错过的感情，作为男生我想将来我应该更加明显且坚定的表达自己的喜欢。</li>
-      <li><span class="who">第三个她</span>2013年，QQ附近的人认识的，一开始我并不喜欢她，她并不漂亮也不优秀，她主动接近我了解我，那时候我高三，她耐心听我说学习上遇到的压力，后来，她表白，我就想着试一试吧，自己当时没有自己喜欢的人。分手原因是在我上大学后，因为异地的关系，发生不少事情是我不能及时的出现在她面前，她接触其他人于是跟别人在一起了。这段持续了大概一年。经过这段恋爱我就明确地知道，我就是个恋爱脑，一旦喜欢上了，就很难放弃，在大学异地期间我会将一半的生活费给她，我以为我付出就会有回报，我怎么样对待别人别人就怎么样对待我，经济的支持终究是比不过陪伴；这段分手对我影响巨大，使原本外向开朗的我不再主动的去社交，当时的我认识到人际关系的脆弱性，觉得关系的疏离好残酷，所以社交圈子也开始变得越来越小。</li>
-      <li><span class="who">第四个她</span>2022年10月，她是b站千粉小主播，我没有给她刷过礼物，但是也许是我上班不忙能够一直陪她聊天吧，所以她加了我微信，下播以后她依然会主动找我聊天，打游戏。我玩雀魂，她就去学了跟我玩，跟她的舰长们一起打游戏时她也拉上我，还单独的跟我开语音，这让我感受到了偏爱，于是在我主动表白后交往。不过这段恋爱在持续了3个月后，我就被"断崖式分手"啦！我想可能是因为恋爱脑作祟，在恋爱以后让她感受到了压力吧？"断崖式分手"真的很痛苦的，不管发生什么的，有什么变故或者想法我真的希望任何事情都能够好好的沟通。</li>
-      <li><span class="who">第五个她</span>2023年8月，她主动接近了解我，我没想到的是她翻完我所有的动态与记录，就只为更了解我，我们聊天很投缘，在跟她聊天中我发现我说过的小事情她都能清晰的记得。她喜欢我，认识没多久她便问我到底喜不喜欢她，我拿不准，虽然跟她聊天也挺愉快的，但是当时没有见过面，不过我感到她很着急确认关系，我是很容易感动的人，所以就听她的试一试吧，于是"交往"了，可是在我们见面以后，她就告诉我她介意我身高不够高，没有身高差，只持续了一周便结束了；后来觉得试一试的心态跟我接触我就不应该答应的，别人可以试一试，我却做不到，如果当初没答应的话，那么还是很好的朋友吧。</li>
-      <li><span class="who">第六个她</span>2024年7月，相处中在没有到合适的时候，我就已经过分地在意她，会焦虑，相处中也做了不少愚蠢事情。不知道是因为我不够优秀还是因为太过于积极吓到她了，最后我被她拒绝了；这次经历中我会常常感觉到自己太想要一个控制不了的结果而感到痛苦，因为这份感觉越发不能成为自己，所以可能做了很多错事，说了很多错话。未来在与人相处中我想我更应该做到 "修身为先。先自爱，由爱及人。先自强，由强荫人。"</li>
-      <li><span class="who">第七个她</span>2025年12月，她做财务工作很忙，但是再忙也愿意赴我的约，她愿意晚上陪我出来逛一逛然后再回去加班，我喜欢她对我的陪伴，陪我去爬山什么的，我还喜欢她认真时候的样子，是我主动表白的，在一起以后，我们的距离虽然不远，但见面越来越少，我没有能够察觉她的想法，她的顾虑，当时我只顾及我自己的想法，只觉得她不见我，所以步步紧逼，我没有能够及时地看到两个人相处中她感受到的顾虑，没有有效及时地察觉到她的想法并理解她的感受，给她带来了压力，我知道她属于回避型依恋，我因为没能发现并及时解决她的问题，所以我被她解决了。</li>
-      </ol>
-    </details>
+        <div class="love-lock" id="loveLock">
+      <div class="lockball"></div>
+      <p class="tip">这段内容被精灵球封印了 🔒<br>输入正确的密码才能展开</p>
+      <div class="lock-row">
+        <input type="password" id="lovePwd" placeholder="密码" autocomplete="off" inputmode="numeric" maxlength="12" aria-label="情感经历密码">
+        <button type="button" id="loveOk">解锁</button>
+      </div>
+      <p class="lock-err" id="loveErr">密码不对哦，再想想～</p>
+    </div>
+    <div id="loveBody" hidden></div>
   </section>
 
   <!-- 06 写在最后 -->
@@ -522,5 +562,42 @@
   <footer>— 自我介绍 暨 相处说明书 ~ —</footer>
 
 </div>
+<script>
+(function(){
+  var ENC = "YX1/cG5if357dnpofnkIWVgJDUFEVF8XUl5VRkIKE0VcWhMJ1p6Y0Ym31Yqe0JSODR1HRVBZD9eEutSal9aOodSOhdWOkgMHAQTRjIXYjb7RkIjRqZ3SvaDQq7bRpb3RkL7bib3RuaPQjp3SlZvRkZjSrZrQjbHfhIXbib3Tibjcmo/TiK3RtIbSsIXctLvSlZvXtbPes5HSoofSi6bcmpTSgKzQj7/RtofSsoTRtrDSsrPQq7bRo63RnZDbib3SlIvRqZnTiJTQjbvSt6vQjbrRuaPTr7XSob/RmKbYjb7SvaDQpZrRhb7SubLRqZnRkL7RmKHTibjRvYrTibnRkIjQq7bRpbzSnKXciqnfk5nctbDSibrSv6LSuYLQj7fQj6zSsZbRnInXtbPRrbvQjbHRnZPQjbvfuoPcmpzSlajRn6PTjKHcmo/Yjb7RrpHTiYjSvYXfsYHSqYvSv63RrpHRuLLQjpTQv5vRi6bRrbvTt4jSpprbib3Rg5PShpnRtb3RvYHfsbPRjbnYjb7cvoDfnp/ctbDSibrToa7RgabQj7fYjb7TupzTiYnQjorQrpfdtKLTipfRpb/SrZrTupzetr7Tt4jSob/RsJ3SjbLbib3QtYTRpb/SgbTSvaDTip7Tr7XTjL/TiJ/SubTRibHTi7Tbib3SgYPdtozTib/RkIzRtb3StazQipXTjpzTi7Tbib3fjqvQjozSp67SmZPRsYnRsIDRvbPTjpzTi7TQjbHTiZjRkavSnJTSqa7SoZXXtbMLHl5dCzsXERIUFRELXVsKCUJHUFwUVl1WQkEJF0ZfXhAK0p2b1Yi40Ymd1JeNCR5EQVNaC9S/rNaMvNegh9e0rNmZldqbs9attd2IudSSiNSsmte/oNSovtS4utWusderute7vt6Lvdu0r9mIttq1r9WLq9qakdmYt92Iudazh9eku9asideQsdWPnNS8pNWMndSjldmYrNaMuNmHud2IudSSiNeKvdWLqdWTtd6LvdqDqtSSiNq1v9STmNeRjNSmu9qbvNe/oNeondSal9SUlNiwvdeKvdSTq9aOj9mIjNSFt9SSiNexndi0mdWPqtaMrtu3iNe8o9WPqN6LvdeNg9WPi9SZkdezrte8hdSsgdS9hd6LvdS8pNSHgNqahdWKvtaOs9K3s9eku9eqlNSovNWPsdSYlNe0tNaOj9m9s9eRjNeruNqDqte/oNqbgd6Lvde8ntWNi9qLiNeGs9eRjNSSiNaIr9S4vNSwqt6LvdeSt9eprdSsmte/oNqLiNeGs9eRjNattdqbqN6LvdeRjNSOh9aMuNWLq9e7uNezrt2IudSRs9SqqdSKotSjg9attdS8pNm0jNeQqtant9qTltSOh9aJptWLq9e8hdSSiNWusdSIstSwutattdqbqNSNpdqbkNWLq9qVndaujNWusd6LvdS8pNS4m9qahdSJpteRjNSmu9qbvNmIttS8pBPSlIvQjbvSlZXRmJfTiLnRvLzTib/SvKLQn6XchbnRsLnTvYAV3o6407i31YmR07mm2ZyE0I+g1IuC3LCC1Jy82o271Yq507KE1omt0JSO2LKU07mn1KmE07iH0rK20KG516+R07mm1YmY0LSE1oGP07SV17eW0quz14WV0Yux3o640JWQ15S20K2f1JeN0JWQ1J+S0YqS1KK60JSO1KO+3Z6+17ql2o271JS206+r17ql0Iyk16WC0KGm1JeN3ZCf1quJ0JSO1Y6u0KG717a70quz3o6v3Y6u16qb0Ym31YmJ3KWu2Y2z0quz17ar07Ky3o640Yyr1YqO0qWA1qar07mm17GH0IGx16+R07mm1Iig3Z6S16mA0LuX16q606mJ1Yqg0Kyt1Jyu0quz2ZOc3Y+J2bWe0IaG1qiw0Ker156W1rG1DR1YXA89ERIUFREXDV5dCw1EQVNaFVJbUEFHCBNAWV0WC9abndaMvNWPm9eRjA0YQkJVWw8FAQMH0IiD3o64ZGDeqLbciqDQq7bQj4vfn5bcmrfQq7bbib3TibLRibHSlrnSvaDSiITQjbzSp67SmZPSlIvbib3SlIvRjIfTib/SibPTi5zQjK7Tib/QianQlrLbib3SlIvQjYrSu5rSu5TfjqPSvaDTi7TckpLRuaPbib3es5HSoofSsavSvaDemqrQjbjYjb7RkIjfsaLRirLSoZ7SvaDfnobRmJfTiJLQjbvesLXRvYHQq7bRu7rSu6nbib3SobzSqJTYjb7RkIjfkJrTrIzYjb7SvaDSgYPStoLQrLLcmqTTibLcmqTSoZXbib3ftpjRgoDSjKHSoofRg5PSqbjftpjRgoDSp67SmZPQq7bQj4vUsbDRvbfRuLnRu67SqpLSrZ7SrZrSvaDTibjRkZbSnJTRpb/Yjb7RrpHTiYjRibPSrYLTr7XStIHThorYjb7RuqDQpa3QjbzSgaPQj7rRsrfSrZ7RuaPQjbzfso/RurvRpoTTr7XStojTu4HSrZrRkIjerJDRvLzYjb7RkIjRv5fckpfStITQjqfTi4jQj7/RqZ3cgq7SuZnQj4vSrZrQjbHfhIXQj7fUsbDciqjRn4fSubDQip/Qj7fSlZXSk7PTibLRjIXUsbDTjr7fjrXciqjRn4fStLrQuYPSvaDSgYPSrb/QkJzRqYHQrpfdtKLYjb7SvaDSgYPSrZ7TiZjStLrQuYPcsaDYjb7QjbHRppTRo63RnZDQjbvTi7Tbib3SgYPRi7neq4zSoY/SjbHbib3SrZrRkZbSnJTRibPSrYLSqa7epobSvaDTjajRhbfTibLRuLvQq7bToa7RhYncgYjQiqvRkIjYjb7SvaDTipfQjYvRuaPQjqnStojRhYDTjajSqbjSqqzSv5TYjb7SvaDRsbzQjLnRkYXRmojSj7fRvZrTi4jRvZrTi4jRhYDRsbzQjLnRkYXRmojSj7fSvaDYjb7Tjr7RhLzTr7XRpZ3SubDQirrTnIfRqZ3SmqXTib/cirbeqJjQiYXYjanciqjRn4fRvbfRuLnRmojRuaPRiIDSor/RgpnSlZXbib3TjI3Ru67RrZ7RkafSoaPRibHRraXTr7XRuaPQjbzSt7/QjYrSu5rTr7XSv4nTkY/Ti5bbib3SjKHSoofQq7bSvaDfn5bcmrfSuYLQj4veqLfRsILQgonTr7XftbTRiYDRsZXbib3flrvRi6bStIHThorQq7bTo77Ql4nRkIzRn7ndsIbYjb7SvLHTipfTkY/Ti5bRqbnSnKLQjK7SjbLRkrrSvqrRi6bfh7jSqJTfh7jRhb7UsbAIGl1eDzgUFREXERIIWVgJDUFEVF8XUl5VRkIKE0VcWhMJ1p6Y0Kqs1Yqe0JSODR1HRVBZDwAEBwPSiIYFBderud2IudSSiNSsmlPQmqvRuLLQg7vRhb7TiYnSp5zYjb7SvaDRg5PSqbjQiqvRkIjSuYXcirbQlY7TvJjYjb7QiLfRqZ3QjK7fn4rSrZ7RuaPQjbvQvp/QjbzSjqvctozSla3QjbHQqobdrJvSlIvctLvSlZvRpZbYjb7SvLHTipfRkIjSu5LQj7fRuaPRi5/TjpPbib3TibnSp5zTipfRpb/SlIvQi6zQtYTQiavTiYnRv5nRuIzSvaDfsLjRkZjYjb7SvKLRiYrSvb7UsbDSvaDQv5vdrrHenLDbib3SlIvRhYDSv4nRmJfTi7Tcgq7RuaPTu5jYjb7cgq7SlIvTr7XfuYLdoI7Tip7QjbHfhIXSvKLRiYrSvb7RpoTRkIjTiK3SvrjTibjSvaDYjb7ciqnSvKfTvp3Qq7bcgq7RuaPRibHfnp/dqoLYjb7ciqjfn5vSvaDRta3RuqbSuYLQj7fSsL3TvYDYjb7Qj7/RqZ3RqZnRuaPQjYrSu5rclJnQqI/Rpb/Ti5bRi7HUsbDQjbzfjrXciqjRn4fStLrQuYPRqZnRvbPTjpzTi7QH0Ymd16680KG53o6407mm1IKF3ZOcE9SimNSDp9eIutS/t9S9vhPSpJTbibDRuaPStoLSvp3ctozRqZ3RrpHTiYjStLrQuYPcsaDTjK7TkK7Yjb7RqZnRsLnTvYDTipfRpb/fn5vRkIjRta3RuqbSuYLQj7fSv7nRv6rSoZXbia4V16SZ0IWh1I670Lmx17u/F9arrtWusdSJudWjrtm8l9Wusd6LvdaMuNaZkNe7pNajrtaPtdWOudWusd6LvdSovNWMsdaNvdS4qdShsNe/p9q0sNe0gtSHoNe/oNWoqtattdeMuderqtaPjtWKpNaOvte0tNu3iNm0jNeQqtSSjNeRiNattdSGqti3q9G0tw0YXVsKPxEXERIUFQ1bWAwIRkFWXxJXWVBEQg8WQllYEwzTmZ3Ti6bQjZvSlIsIGkJHUFwKBwEFAteNgQnRrbrbib3SlIvQjYrSu5rSu5TfjqPQj7fflpHSvaDYjb7SvaDRg5PStoLSuYLTr7XRqZ3RkIjQjonRm73RuaPSvLHRrbvTr7XSu5rStbDTibzcm4HSjKfbib3SgYPRupvTiYjSroXTi7TckpLRuaPbib3RuaPQjp3fsLjRkZjSj7rSv6TQjarbib3SrZrcgq7SlIvctLvSlZvQjZzRuaPRuqDQv4LSvaDfnobcirbQq7bRhb7Ti7nStrTSlIvdtozfso/SjbTRqILTr7Xfn4LRi6bUsbDRkIjSp67SmZPRuaPbib3fn5bcmrfRg5PRkavTiLfRkIjTj43dop/RuaPRvYHSi6fRo63Tib/Ro63RnZDRkIjYjb7SvaDRuo3QjbzStrTbib3fqI/TsYffhq3RkIjfsLjRkZjTiK3SuYvRtbvRiprQq7bbib3TjLTSrZ7SjKHSoofRg5PSqbjflrPcirberJDbib3Tib/cirbRuaPSsa7SuYLRkIjSj7rTqLHRsZfTlJ/fn5bRsILQgonbib3RuaPSrZ7Sj7rRm4jRqaHSsa7Su5rTr7XTi4jbib3RuLLQjpTSgYPRpZ3SlIvTr7XfnqfQjbHfnqfRpZbYjb7Qj7/RqZ0W0YuT1Iy0F9WNt92IudS4ntSsmtSrmdS8pNWMndqTtNiqk9aPkNSnv92IudSSiNeEhNSmu9qbvNe/oNeRjNWMutSwute/oNqOnticqdaMuNSTrtufrd6LvdSGlNeruNqOnticqdeDm96Lvde7n9e7sNWPmNWNt9aMtdSmmdaKitaMotSpqtWNt92IrtSnv9SpkNmQuNeKotmYpNaMtdmYpNWusdSIstS0tNmArtS8pNe5lNqTk9e/oNeEhNWPvNeOodmYlNWZodSNpdWusd6Lvde8ntWNi9e7mtWMlNqboNWPsdqboN6LvdS8pNS6hde1r9WPvNe8hd6LvdeSt9eprdeJptS/rNSGlNaapdeOodattdqbqN6Lvdu2ltWOudqLrdevnteKvdSSjNWusderute7vtSnltG0tw0YXVsKPxEXERIUFQ1bWAwIRkFWXxJXWVBEQg8WQllYEwzTmZ3StJ/QjZvSlIsIGkJHUFwKBwEFBdeNgQbRrbrbib3QqorRkbXTiZ/RqZnRg5PSqbjSuYLRpbnesbDTr7XRpoTRtajYjb7SvaDSgYPRgoPQir3cirbSubTRqYHSrZrSsb7SlIvbib3TjajTsZffqKPbib3QqorRkbXTiZ/QjK7SsKjQj7fTib/RhaDRtajclZPTi7nStrTUsbDQjbzQrpfdtKLRqZ3RrpHTiYjSvaDTib/Rka7TjarTkrHfjqrSrZ7SqpLQjYvSlZjcirbTi7zTkp7Rr7PRpaLSuYLRkIjTi7Tbib3RrbLRpb/RuaPcl5rSlIvSvqPQiq/Qj7fYjanciqjRnZPTjr7Sv7TQjZzRuaPQiavSiYrRjYnRta3ckrjSuYLcspvShoPRkZvRsoHck7DTibLQjZvRv5XRvYfTib/Qj7fQq7bTjqLRr67ctb3Rta3RvYHQpqncvpfYjb7RrpHTiYjciqjTio/Ssa7flrvcg7vSvqPQjbzfso/SvaHTiYjcspvShoPbib3RuLLQjpTSvp3ctozSsKjQj7fSj7rRkavepavQj7rYjb7cmoXTi7TRi7nSlajdoajfnq/XtbPRrZjSqJTSrZrQjb/Ti4jTronSlbbQjZzRuaPStoLRuaPSroXSi6bcmpTSsKjRvYEXE9aLm9mNmtaMj9SyudG0t9Syudqzn9a/gN2IudajgNW8hNS4u9aOj9K3s9exvdmwm9eIj96LvdWghNSLi9q5ntWNi9G0txMLHl5dCzsXERIUFRELXVsKCUJHUFwUVl1WQkEJF0ZfXhAK0p2b1Yq30Ymd1JeNCR5EQVNaCwMHAwfRjIUGA9Sovd6LvdeRjNS2q9qAl9S9kNeDkNWKrdeKvdSIqN2IudWKt9SsmtSxvNeLrNWOrtSwitezvtqBgde/oNWusdaNl92IudSSiNSwitezvtStr9WPu9utn9e/oNezj9eqlNu0rtWPsdu0rtazh9eku9SxvNevq9S5ite+lda4nN2Iude/oNeiqdebk9eRjNSYiNS8pNattdutn9WLhd2Iudium9S8pNS5itW8mdSGgNaPtdWOudWusd6LvdS8pNmIqdeiqdebk9eRjNmZldWoqtegh9e0rNattdSUgtSaod2IudevntS8pNWPite+ndmWmdWtiNattd2IudSrmdaMtdmChtaPkNSnv92Iude/oNaPmdattdqDqNaRitqtiNazh9aMuNmIrd2IudWKt9qTtNiqk9qCv9eqlNqCv9SHoN2Iude/oNSGlNeruNq3iNSTrtebqtmQuNeRjNattdS3hteEpN2IudSSiNWusdiWj9qtpN6LvdeJptegh9S8pNS4m9uVi9S4u9S8pNmwm9eDhNattdS3hteEpN2IudS4m9qTvNSJpteRjNWPvNqTtNe/oN2Iude+sdaPkNealNSZkNaDltu0id6LvdS8pNeFkNSovNm0jNeQqtS4u9Sjg9SrgdWovtS/gdaMkdWPm9aOj9asideQsdWPnNeRjNezrte7otS/gdWusdiWj9qtpN6LvdSGlNeruNSovNeiude7v9egh9eohdSYrtqTvNS/gdeRjNattdS3hteEpNeNg9ant9qTltSSiNWusdezrte7ot6LvdWPrNSSiNeMk9eqlNaOs9S5ute+rt6LvdS8pNaolNu1ptSSiNeFq9WNv9evq9i2jteqvtWJrNS1vt6LvdS8pNSskdaMj9eFkNq3iNS4oNW6hdSOh9e7v9egh9qTltSxgteRjNattdujm9iVqd2Iude+sdaPkNe/oNqWntSSiNqTltSxgtaOs9K3sw4bWVgJ";
+  var box = document.getElementById("loveLock");
+  var input = document.getElementById("lovePwd");
+  var btn = document.getElementById("loveOk");
+  var err = document.getElementById("loveErr");
+  var body = document.getElementById("loveBody");
+  function decrypt(pwd){
+    try{
+      var raw = atob(ENC);
+      var bytes = new Uint8Array(raw.length);
+      for(var i=0;i<raw.length;i++){ bytes[i] = raw.charCodeAt(i) ^ pwd.charCodeAt(i % pwd.length); }
+      return new TextDecoder("utf-8").decode(bytes);
+    }catch(e){ return null; }
+  }
+  function tryUnlock(){
+    var pwd = input.value.trim();
+    if(!pwd){ input.focus(); return; }
+    var text = decrypt(pwd);
+    if(text && text.indexOf("POKE_UNLOCK_OK") === 0){
+      body.innerHTML = '<ol class="love">' + text.slice(14) + '</ol>';
+      body.hidden = false;
+      box.hidden = true;
+    }else{
+      err.style.display = "block";
+      box.classList.remove("shake");
+      void box.offsetWidth;
+      box.classList.add("shake");
+      input.select();
+    }
+  }
+  btn.addEventListener("click", tryUnlock);
+  input.addEventListener("keydown", function(e){ if(e.key === "Enter"){ e.preventDefault(); tryUnlock(); } });
+  input.addEventListener("input", function(){ err.style.display = "none"; });
+})();
+</script>
 </body>
 </html>
