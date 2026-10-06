@@ -202,14 +202,27 @@
     border:2px solid var(--poke-yellow-deep);
     border-left:7px solid var(--poke-red);
     border-radius:14px;
-    padding:20px 24px;
+    padding:16px 18px;
     margin:6px 0 22px;
+    color:var(--accent-deep);
+  }
+  .info-list{
+    list-style:none;margin:0;padding:0;
+    display:flex;flex-wrap:wrap;gap:10px 12px;
+  }
+  .info-list li{
+    background:#fffaf0;
+    border:2px solid var(--poke-yellow-deep);
+    border-radius:999px;
+    padding:6px 18px;
     font-family:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;
     font-size:16px;
-    line-height:2;
-    color:var(--accent-deep);
-    white-space:pre-wrap;
+    font-weight:700;
+    line-height:1.7;
     letter-spacing:.04em;
+    color:var(--accent-deep);
+    box-shadow:0 3px 0 rgba(34,34,34,.10);
+    white-space:nowrap;
   }
   .facts{
     display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 22px;
@@ -440,10 +453,15 @@
   <!-- 01 基础信息 -->
   <section class="card" id="basic">
     <h2><span class="pokeball"></span>基础信息</h2>
-    <div class="infobox">♂️   
-1995/8   
-163CM 63KG   
-广西   南宁</div>
+    <div class="infobox">
+      <ul class="info-list">
+        <li>♂️</li>
+        <li>南宁</li>
+        <li>1995年8月</li>
+        <li>163cm</li>
+        <li>63kg</li>
+      </ul>
+    </div>
     <div class="facts">
       <div class="row"><div class="k">活动范围</div><div class="v">日常出没于江南万达附近父母家、葛村路附近上班、良庆大桥附近自己家</div></div>
       <div class="row"><div class="k">工作</div><div class="v">私企 软件实施项目的驻场实施PM 工作比较轻松不加班</div></div>
@@ -455,7 +473,7 @@
         <li>游戏：大部分曾经热门的游戏都玩过，现在的话相比单机我更喜欢跟朋友一起玩，喜欢娱乐向、剧情向或解谜向游戏。目前还在玩的网游就王者荣耀，金铲铲，无限暖暖。</li>
         <li>仔细想想我喜欢尝试新鲜事物，所以喜欢的东西实在太多</li>
       </ul></div></div>
-      <div class="row"><div class="k">主要社交平台</div><div class="v"><a href="https://space.bilibili.com/3987497" target="_blank" rel="noopener">B站</a> &nbsp; <a href="https://weibo.com/u/5966539512" target="_blank" rel="noopener">微博</a><br>QID :ning589</div></div>
+      <div class="row"><div class="k">主要社交平台</div><div class="v"><a href="https://space.bilibili.com/3987497" target="_blank" rel="noopener">B站</a> &nbsp; <a href="https://weibo.com/u/5966539512" target="_blank" rel="noopener">微博</a>，（其他平台同名）<br>QID :ning589</div></div>
     </div>
     <p>人是非常复杂的，标签虽不完全准确，但标签还是能够方便认清自己也方便他人了解自己：</p>
     <p>自我标签：</p>
